@@ -1,0 +1,157 @@
+@font-face{
+    font-family: font;
+    src: url(Vazir.ttf);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: font;
+    
+    
+}
+body{
+    display: grid;
+    place-items: center;
+    background-color: #1b1f23;
+    
+    
+}
+.container{
+    width: 20rem;
+    height: 33.125rem;
+    border-radius: 47px;
+    background: #1c2025;
+    box-shadow:  19px 19px 38px #111416,
+                -19px -19px 38px #252a30;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: relative;
+}
+.profile{
+    width: 8.125rem;
+    height: 8.125rem;
+    background-image: url(1645778233191.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    border: 2px solid orangered;
+    
+}
+.name{
+    color: gray;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+.bio{
+    color: #727272;
+    margin-top: .5rem;
+
+}
+section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    text-align: center;
+    
+}
+.cardItem{
+    color: #626262;
+
+}
+.cardItem .value{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+footer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-content: center;
+    justify-items: center;
+    gap: 20px 0;
+   
+    
+}
+.follow{
+    grid-column: 1/5;
+    width: 250px;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #1b1f23;
+    box-shadow: 5px 5px 10px #0f1214, -5px -5px 10px #272c32;
+    color: #626262;
+}
+footer i ,.info,.phone,.email{
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    color: #626262;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #0f1214, -5px -5px 10px #272c32;
+    overflow: hidden;
+    top: 65%;
+}
+.info,.phone,.email{
+    transition: width,height .5s,.5s;
+}
+#infocheak , #phone,#email{
+    display: none;
+}
+#infocheak:checked ~ .container .info{
+    position: absolute;
+    width: 100%;
+    height: 47%;
+    background-color: #1b1f23;
+    text-align: left;
+    display: flex;
+    
+    
+}
+
+#phone:checked ~ .container .phone{
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    background-color: #1b1f23;
+    text-align: center;
+}
+#email:checked ~ .container .email{
+    position: absolute;
+    width: 100%;
+    height: 28%;
+    background-color: #1b1f23;
+    text-align: left;
+}
+#email:checked ~ .container .email::after{
+    font-size: 17px;
+    padding-left: 12px;
+    line-height: 28px;
+    content: 'my email address is: yasinmalekian90@gmail.com';
+    font-family: 'Lucida Sans';
+    
+}
+#phone:checked ~ .container .phone::after{
+    font-size: 25px;
+    padding-left: 12px;
+    line-height: 30px;
+    content: '+98 930 720 5932';
+}
+
+#infocheak:checked ~ .container .info::after{
+    font-size: 12px;
+    padding-left: 12px;
+    line-height: 26px;
+    content: 'Hello! My name is Yasin Malekian and I love web design, I am a front-end developer and I try to learn new things about it every day. I have some teaching experience and so far I have worked with PHP, HTML, CSS, and I am learning JavaScript and web design in the field of WordPress, GitHub, and GitLab. ';
+    font-family: 'Lucida Sans';
+}
